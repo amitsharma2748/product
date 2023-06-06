@@ -231,7 +231,14 @@ const Products = () => {
                   ))}
                 </ul>
                 <Box margin={"auto"}>
-                  <Button variant="outlined">Checkout</Button>
+                  <Button
+                    variant="outlined"
+                    onClick={() => {
+                      alert("Work in progress");
+                    }}
+                  >
+                    Checkout
+                  </Button>
                 </Box>
               </Box>
             </Fade>
