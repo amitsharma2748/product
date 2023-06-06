@@ -9,14 +9,11 @@ import {
   Button,
   Container,
   Fade,
-  FormControl,
   Grid,
-  InputLabel,
   MenuItem,
   Modal,
   Select,
   TextField,
-  Typography,
 } from "@mui/material";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import axios from "axios";
@@ -37,8 +34,9 @@ const Products = () => {
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    width: 800,
-    height: 400,
+    width: "70%",
+    maxHeight: 400,
+    overflowY: "scroll",
     bgcolor: "#313131",
     border: "2px solid #000",
     boxShadow: 24,
@@ -204,12 +202,15 @@ const Products = () => {
             }}
           >
             <Fade in={open}>
-              <Box sx={style}>
+              <Box sx={style} className="modal">
                 <ul className="cart_list">
                   {product.items?.map((item) => (
                     <CartCard item={item} />
                   ))}
                 </ul>
+                <Box margin={"auto"}>
+                  <Button variant="outlined">Checkout</Button>
+                </Box>
               </Box>
             </Fade>
           </Modal>

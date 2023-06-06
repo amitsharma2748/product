@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "../Styles/Products.css";
 import ReactStars from "react-rating-stars-component";
-import { Box, Button, Fade, Modal, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { cartActions } from "../Redux/cartSlice";
 const Product = ({ product }) => {

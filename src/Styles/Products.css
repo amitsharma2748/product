@@ -45,3 +45,17 @@
   list-style: none;
   padding: 0;
 }
+.modal::-webkit-scrollbar {
+  width: 10px;
+}
+
+.modal::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-color: #e7e7e7;
+  border: 1px solid #cacaca;
+}
+
+.modal::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: #666464;
+}
