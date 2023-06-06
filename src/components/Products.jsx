@@ -14,6 +14,7 @@ import {
   Modal,
   Select,
   TextField,
+  Typography,
 } from "@mui/material";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import axios from "axios";
@@ -103,8 +104,11 @@ const Products = () => {
     setData(filteredArray);
     setSelectedBrand(brand);
   };
-
-  // console.log(uniqueCategories);
+  uniqueCategories.map((category) =>
+    data
+      ?.filter((item) => item.category === category)
+      .map((item) => console.log(item))
+  );
   return (
     <Container maxWidth="xl">
       {loading ? (
@@ -184,9 +188,27 @@ const Products = () => {
           </Box>
           <div className="products">
             {data?.length &&
-              data?.map((product) => (
-                <Product key={product.id} product={product} />
-              ))}
+              uniqueCategories.map((category) =>
+                data
+                  ?.filter((item) => item.category === category)
+                  .map((product, index) => (
+                    <>
+                      {index === 0 && (
+                        <Box width={"100%"}>
+                          <br />
+                          <Typography
+                            variant="h2"
+                            sx={{ textTransform: "capitalize" }}
+                            color={"green"}
+                          >
+                            {product.category}
+                          </Typography>
+                        </Box>
+                      )}
+                      <Product key={product.id} product={product} />
+                    </>
+                  ))
+              )}
           </div>
           <Modal
             aria-labelledby="transition-modal-title"
