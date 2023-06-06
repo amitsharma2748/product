@@ -1,0 +1,47 @@
+.productsHeading {
+  font: 500 1.5vmax "Roboto";
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.171);
+  padding: 2vmax;
+  width: 15vmax;
+  margin: 2vmax auto;
+  color: rgba(0, 0, 0, 0.678);
+}
+.products {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 5vmax;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.productCard {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  margin-bottom: 40px;
+  width: 300px;
+}
+.productCard img {
+  width: 300px;
+  height: 300px;
+}
+.stars {
+  display: flex;
+  justify-content: center;
+}
+.categories_button {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.categories_button button {
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+.cart_list {
+  list-style: none;
+  padding: 0;
+}
