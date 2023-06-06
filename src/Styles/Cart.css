@@ -57,3 +57,22 @@
   background-color: #4b4b4b;
   color: white;
 }
+@media only screen and (max-width: 600px) {
+  .item h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+  }
+
+  .price {
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: end;
+  }
+
+  .itemprice {
+    font-weight: normal;
+    font-size: 0.6rem;
+    font-style: italic;
+    text-align: end;
+  }
+}
