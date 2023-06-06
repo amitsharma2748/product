@@ -116,7 +116,17 @@ const Products = () => {
       ) : (
         <Box>
           <h2 className="productsHeading">Products</h2>
-          <Grid container marginBottom={"25px"}>
+          <Grid
+            container
+            marginBottom={"25px"}
+            sx={{
+              position: "sticky",
+              top: "0",
+              backgroundColor: "#ECF8F9",
+              opacity: "0.9",
+              padding: "15px",
+            }}
+          >
             <Grid
               item
               xs={12}
@@ -166,6 +176,11 @@ const Products = () => {
               display={"flex"}
               justifyContent={"center"}
               mt={2}
+              sx={{
+                ":hover": {
+                  cursor: "pointer",
+                },
+              }}
             >
               <ShoppingCartIcon onClick={openHandler} fontSize="large" />
               <Avatar sx={{ width: 24, height: 24 }}>
