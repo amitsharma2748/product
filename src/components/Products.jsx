@@ -123,7 +123,7 @@ const Products = () => {
               position: "sticky",
               top: "0",
               backgroundColor: "#ECF8F9",
-              opacity: "0.9",
+              zIndex: "4",
               padding: "15px",
             }}
           >
