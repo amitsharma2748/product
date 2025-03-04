@@ -141,6 +141,7 @@ const Products = () => {
                 options={uniqueBrands}
                 sx={{ width: 300 }}
                 value={selectedBrand}
+                disabled={true}
                 onChange={(event, newValue) => {
                   clickHandlerBrand(newValue);
                   if (newValue === null) {
